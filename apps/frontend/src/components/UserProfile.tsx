@@ -23,7 +23,6 @@ const UserProfile = () => {
 
   useEffect(() => {
     if (token) {
-      console.log('cacing', process.env.NEXT_PUBLIC_FIREBASE_API_KEY)
       const getUser = async () => {
         try {
           dispatch(setLoading({ status: true }));
