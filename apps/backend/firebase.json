@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "source": "./",
+    "runtime": "nodejs18" 
+  },
+  "emulators": {
+    "singleProjectMode": true,
+    "functions": {
+      "host": "0.0.0.0",
+      "port": 5001
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}

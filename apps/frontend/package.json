@@ -1,0 +1,31 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "source .env && next dev -p $PORT",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ebuddy/shared": "*",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.3",
+    "@reduxjs/toolkit": "^2.5.1",
+    "firebase": "^11.3.0",
+    "next": "14.2.23",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-redux": "^9.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.23",
+    "typescript": "^5"
+  }
+}
