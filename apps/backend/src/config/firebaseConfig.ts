@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const serviceAccount = require("./serviceAccountKey.json");
+const serviceAccount = require("./../../../../serviceAccountKey.json");
 
 if (!admin.apps.length) {
   admin.initializeApp({
