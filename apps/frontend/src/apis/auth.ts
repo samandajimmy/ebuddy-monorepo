@@ -2,8 +2,7 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } f
 import { store } from "../store/store";
 import { setToken, clearUser } from "../store/actions";
 import { auth } from "@/config/firebaseConfig";
-import { createUserData } from "./userApi";
-import { User } from "@ebuddy/shared"
+import { createUserData, updateUserActivity } from "./userApi";
 
 
 export const login = async (email: string, password: string) => {
@@ -12,6 +11,7 @@ export const login = async (email: string, password: string) => {
 
   // ✅ Store token in Redux
   store.dispatch(setToken(token));
+  updateUserActivity()
 
   return { user: userCredential.user, token };
 };

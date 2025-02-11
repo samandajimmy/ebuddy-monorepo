@@ -6,6 +6,8 @@ import { fetchUserData, updateUserData } from "../apis/userApi";
 import { logout } from "../apis/auth";
 import { Button, Typography, Container, TextField, Box } from "@mui/material";
 import { setLoading } from "@/store/actions";
+import useActivityTracker from "@/hooks/useActivityTracker";
+import PotentialUsers from "./PotentialUsers";
 
 const UserProfile = () => {
   const dispatch = useDispatch();
@@ -16,8 +18,12 @@ const UserProfile = () => {
   const user = useSelector((state: RootState) => state.user.user);
   const loading = useSelector((state: RootState) => state.loading);
 
+
+  useActivityTracker()
+
   useEffect(() => {
     if (token) {
+      console.log('cacing', process.env.NEXT_PUBLIC_FIREBASE_API_KEY)
       const getUser = async () => {
         try {
           dispatch(setLoading({ status: true }));
@@ -71,6 +77,8 @@ const UserProfile = () => {
           Logout
         </Button>
       </Box>
+
+      <PotentialUsers />
     </Container>
   );
 };
